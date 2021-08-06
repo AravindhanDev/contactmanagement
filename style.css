@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #000000;
+    background-image: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+}
+
+main {
+    width: 70%;
+    margin: 15px auto 0;
+}
+
+h1 {
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    margin-bottom: 1.3rem;
+    margin-top: 1rem;
+}
+
+#contactForm input[name='name'] {
+    grid-area: name;
+}
+
+#contactForm input[name='email'] {
+    grid-area: email;
+}
+
+#contactForm input[name='tel'] {
+    grid-area: tel;
+}
+
+#contactForm button {
+    grid-area: button;
+}
+
+#contactForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'name name' 'email tel' 'button button';
+    margin-bottom: 1rem;
+}
+
+#contactForm * {
+    margin: 7px;
+    padding: 7px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#contactForm button {
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: 'Kanit', sans-serif;
+    background-color: #2ea043;
+    font-size: 1.2rem;
+    border: none;
+}
+
+#contactForm input {
+    outline: none;
+    letter-spacing: 2px;
+    font-family: 'Kanit', sans-serif;
+    border: none;
+}
+
+#contactForm input:focus {
+    border: 2.5px solid transparent;
+}
+
+#contactForm button:hover {
+    color: #eee;
+    background-color: #2ea043;
+}
+
+#contactForm button:active {
+    transform: scale(0.98);
+    font-weight: 700;
+}
+
+.contacts {
+    width: 69vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    margin: 1rem auto 3rem;
+    padding: 0.5rem;
+    background-color: rgba(50, 50, 50, 0.3);
+    /* background-image: url('https://www.transparenttextures.com/patterns/grid-me.png'); */
+}
+
+.contacts div {
+    width: 100%;
+    padding: 12px;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 0.7rem;
+}
+
+.contacts div * {
+    margin: 5px;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+}
+
+.contacts p {
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.contacts button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    width: 10rem;
+    padding: 0.2rem 0;
+    border-radius: 3px;
+    border: 2px solid #da3633;
+    background-color: transparent;
+    color: #da3633;
+    transition: all 0.2s;
+}
+
+.contacts button:hover,
+.contacts button:active {
+    background-color: #da3633;
+    color: #1d1117;
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        width: 100%;
+    }
+    .contacts {
+        width: 97%;
+        margin: 0 auto;
+    }
+    #contactForm * {
+        margin: 5px;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+    #contactForm input {
+        outline: none;
+    }
+}
